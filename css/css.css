@@ -1,0 +1,209 @@
+       
+       @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Anton&family=Teko:wght@400;500;600;700&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+       body {
+            color: #444;
+            font-family: 'Prompt', 'Roboto', sans-serif;
+            background-color: #ffffff;
+            background-image: url('../img/Designer.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+        #oldbody {
+            background-image:  radial-gradient(#686868 0.9px, transparent 0.9px), radial-gradient(#686868 0.9px, #ffffff 0.9px);
+            background-size: 36px 36px;
+            background-position: 0 0,18px 18px;
+        }
+
+        .nav-bar {
+            background-color: #888;
+            color: white;
+            font-family: 'Anton', sans-serif;
+            
+        }
+        .nav-bar a {
+            color: white;
+            margin-left: auto;
+            }
+
+        .highlight {
+            background-color: rgb(28, 108, 199);
+            height: 5px;
+        }
+        .centered-container {
+            background-color: rgba(240, 240, 240, 0.8); /* 20% opacity white */
+            width: 60%;
+            margin: auto;
+            padding: 20px 20px 5px 20px;
+            border-radius: 10px;
+            text-align: left;
+            position: relative;
+            top: 20px; /* Adjust this value as needed */
+            filter: drop-shadow(10px 10px 5px rgba(200, 200, 200, 0.5));
+        }
+        
+        .centered-container h2 {
+            letter-spacing: normal;
+            text-align: center;
+            font-size: 2.5em;
+
+        }
+        .kevinspacey {
+            letter-spacing: 0.2em;
+        }
+
+        .results {
+            background-color: rgba(235, 235, 235, 0.9); /* 20% opacity white */
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            position: relative;
+            top: 20px; /* Adjust this value as needed */
+            font-family: serif;
+        }
+
+        h1 { 
+            font: weight 700px;
+            font-size: 50pt
+        }
+
+        p { 
+            font-size: 1.2em;
+        }
+
+        toggle-button {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+                    }
+            .navbar-toggler-icon {
+            background-image: url('../img/car.svg');
+            }
+
+
+            .bottom-div {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #f1f1f1;
+                text-align: center;
+              }
+
+
+              .prompt-thin {
+                font-family: "Prompt", sans-serif;
+                font-weight: 100;
+                font-style: normal;
+              }
+              
+              .prompt-extralight {
+                font-family: "Prompt", sans-serif;
+                font-weight: 200;
+                font-style: normal;
+              }
+              
+              .prompt-light {
+                font-family: "Prompt", sans-serif;
+                font-weight: 300;
+                font-style: normal;
+              }
+              
+              .prompt-regular {
+                font-family: "Prompt", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+              }
+              
+              .prompt-medium {
+                font-family: "Prompt", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+              }
+              
+              .prompt-semibold {
+                font-family: "Prompt", sans-serif;
+                font-weight: 600;
+                font-style: normal;
+              }
+              
+              .prompt-bold {
+                font-family: "Prompt", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+              }
+              
+              .prompt-extrabold {
+                font-family: "Prompt", sans-serif;
+                font-weight: 800;
+                font-style: normal;
+              }
+              
+              .prompt-black {
+                font-family: "Prompt", sans-serif;
+                font-weight: 900;
+                font-style: normal;
+              }
+              
+              .prompt-thin-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 100;
+                font-style: italic;
+              }
+              
+              .prompt-extralight-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 200;
+                font-style: italic;
+              }
+              
+              .prompt-light-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 300;
+                font-style: italic;
+              }
+              
+              .prompt-regular-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 400;
+                font-style: italic;
+              }
+              
+              .prompt-medium-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 500;
+                font-style: italic;
+              }
+              
+              .prompt-semibold-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 600;
+                font-style: italic;
+              }
+              
+              .prompt-bold-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 700;
+                font-style: italic;
+              }
+              
+              .prompt-extrabold-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 800;
+                font-style: italic;
+              }
+              
+              .prompt-black-italic {
+                font-family: "Prompt", sans-serif;
+                font-weight: 900;
+                font-style: italic;
+              }
+              
