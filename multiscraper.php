@@ -2,9 +2,9 @@
 include('header.html');
 include('functions.php');
 
-$debug = 0;
+$flag = $debug = 0;
 $totalArray='';
-
+ 
 //echo '<pre>';
 
 
@@ -12,8 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['parts'])) {
     
     // Get numbers from the form
     $numbers = $_POST['parts'];
-    logger($numbers);
-    
+    $lognumbers = str_replace(array("\r", "\n"), ',', $numbers);
+    logger($lognumbers);
+
     // Explode the numbers into an array by newlines
     $numbersArray = preg_split('/\r\n|\r|\n/', $numbers);
 // ;
@@ -117,12 +118,13 @@ foreach ($numbersArray as $number){
     </form>
     </div>
 
+
     <?php 
-    $totalArray= str_replace("FOUR SEASONS ", "", $totalArray);
-    $totalArray= str_replace(" Specifications", " Attributes", $totalArray);
-
-
-    echo "<div class=\"results\">$totalArray</div>";
-    
+    if ($flag == 1){
+        
+            $totalArray= str_replace("FOUR SEASONS ", "", $totalArray);
+            $totalArray= str_replace(" Specifications", " Attributes", $totalArray);
+            echo "<div class=\"results\">$totalArray</div>";
+    }
     include('footer.html');
     ?>
