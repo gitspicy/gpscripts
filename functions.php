@@ -3,7 +3,7 @@
 //log script
 function logger($mydata) {
         // Define the log file path
-        $logFile = 'log/access_log.txt';
+        $logFile = 'log/access_log.log';
 
         // Get the current time
         $time = date('Y-m-d H:i:s');
