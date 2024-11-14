@@ -10,8 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['parts'])) {
     
     // Get numbers from the form
     $numbers = $_POST['parts'];
-    logger($numbers);
-           
+    $lognumbers = str_replace(array("\r", "\n"), ',', $numbers);
+    logger($lognumbers);
+
     // Explode the numbers into an array by newlines
     $numbersArray = preg_split('/\r\n|\r|\n/', $numbers);
 // ;
@@ -145,7 +146,7 @@ include('header.html');
 
 <div class="centered-container">
         <h2>Batch A/C Kit Attributes File Download</h1>
-        <p>Enter the part numbers below, one per line up to 10. The results will be downloaded as a text file.<br />
+        <p>Enter the part numbers below, one per line up to 20. The results will be downloaded as a text file.<br />
 
         </p>
        

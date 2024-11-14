@@ -108,7 +108,7 @@ foreach ($numbersArray as $number){
 
 <div class="centered-container">
         <h2>Batch A/C Kit Attributes Scraper</h1>
-        <p>Enter the part numbers below, one per line up to 10, then click submit. Results will appear below. 
+        <p>Enter the part numbers below, one per line up to 20, then click submit. Results will appear below. 
         </p>
        
     <form method="POST">
