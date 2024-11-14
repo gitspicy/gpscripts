@@ -35,6 +35,25 @@
             background-color: rgb(28, 108, 199);
             height: 5px;
         }
+        .newcenter {
+          width: 60%;
+          margin: auto;
+          padding: 20px 20px 5px 20px;
+          border-radius: 10px;
+          text-align: center;
+          position: relative;
+          top: 20px; /* Adjust this value as needed */
+          
+      }
+
+          .newcenter h2 {
+            color: rgb(28, 108, 199);
+            letter-spacing: 1px;
+            text-align: center;
+            font-size: 4em;
+            font-family: 'Staatliches', sans-serif;
+        }
+
         .centered-container {
             background-color: rgba(240, 240, 240, 0.8); /* 20% opacity white */
             width: 60%;

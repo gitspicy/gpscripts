@@ -1,12 +1,13 @@
 <?php
-//echo "<pre>";
+include('functions.php');
+
 //set initial flag
 $flag=0;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['url'])) {
     //get PN from form
     //BEGIN
-
+    logger($_POST['url']);
     $base = "https://www.rockauto.com/en/parts/four+seasons," . $_POST['url'];
      
     //$url = filter_var($_POST['url'], FILTER_SANITIZE_URL);

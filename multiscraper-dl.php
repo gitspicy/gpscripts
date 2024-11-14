@@ -1,5 +1,5 @@
 <?php
-
+include('functions.php');
 $debug = 0;
 
 
@@ -10,7 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['parts'])) {
     
     // Get numbers from the form
     $numbers = $_POST['parts'];
-        
+    logger($numbers);
+           
     // Explode the numbers into an array by newlines
     $numbersArray = preg_split('/\r\n|\r|\n/', $numbers);
 // ;
@@ -139,6 +140,7 @@ if (isset($totalArray))
 
 
 include('header.html');
+
 ?>
 
 <div class="centered-container">
