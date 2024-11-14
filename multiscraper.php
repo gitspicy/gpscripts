@@ -1,5 +1,7 @@
 <?php
 include('header.html');
+include('functions.php');
+
 $debug = 0;
 $totalArray='';
 
@@ -10,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['parts'])) {
     
     // Get numbers from the form
     $numbers = $_POST['parts'];
-        
+    logger($numbers);
+    
     // Explode the numbers into an array by newlines
     $numbersArray = preg_split('/\r\n|\r|\n/', $numbers);
 // ;
