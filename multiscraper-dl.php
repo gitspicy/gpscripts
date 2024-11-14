@@ -145,12 +145,6 @@ include('header.html');
         <h2>Batch A/C Kit Attributes File Download</h1>
         <p>Enter the part numbers below, one per line up to 10. The results will be downloaded as a text file.<br />
 
-        6116NK<br />
-        
-        
-2095NK<br />
-
-3698NK<br />
         </p>
        
     <form method="POST">

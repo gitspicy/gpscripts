@@ -91,7 +91,7 @@ echo <<< BEWM
 
 <div class="centered-container">
         <h2>AC Kit Attribute Scraper</h1>
-        <p>Enter the part number below. 5283NK</p>
+        <p>Enter the part number below. Results displayed below.</p>
     
     <form method="POST">
         <label for="url"></label>
@@ -109,13 +109,16 @@ echo <<< BEWM
 BEWM;
 
 if ($flag==1){
+
+    $tc= str_replace("FOUR SEASONS ", "", $tc);
+    $tc= str_replace(" Specifications", " Attributes", $tc);
 echo <<< HAM
 <div class="centered-container">
     <div class="results">
         <p>$tc</p>
         <hr />
         </div>
-        </div>
+    </div>
        
 HAM;
 }

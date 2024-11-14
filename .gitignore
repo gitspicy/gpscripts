@@ -1,0 +1,10 @@
+# Ignore all .log files
+*.log
+*.bak
+
+# Ignore all files in any directory named temp
+temp/
+log/
+
+# Ignore logs directory anywhere in the repository
+**/log
