@@ -2,6 +2,7 @@
        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap');
        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Teko:wght@400;500;600;700&display=swap');
        @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
        body {
             color: #444;
@@ -40,32 +41,34 @@
             margin: auto;
             padding: 20px 20px 5px 20px;
             border-radius: 10px;
-            text-align: left;
+            text-align: center;
             position: relative;
             top: 20px; /* Adjust this value as needed */
             filter: drop-shadow(10px 10px 5px rgba(200, 200, 200, 0.5));
+            
         }
         
         .centered-container h2 {
-            letter-spacing: normal;
+            letter-spacing: 1px;
             text-align: center;
             font-size: 2.5em;
-
+            font-family: 'Staatliches', sans-serif;
         }
+
         .kevinspacey {
             letter-spacing: 0.2em;
         }
 
         .results {
-            background-color: rgba(235, 235, 235, 0.9); /* 20% opacity white */
-            width: 60%;
-            margin: auto;
-            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* 20% opacity white */
+            width: 90%;
+            margin: 50px;
+            padding: 30px;
             border-radius: 10px;
             text-align: left;
-            position: relative;
+           
             top: 20px; /* Adjust this value as needed */
-            font-family: serif;
+            font-family: Arial, sans-serif;
         }
 
         h1 { 

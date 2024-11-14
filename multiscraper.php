@@ -1,13 +1,27 @@
 <?php
-//echo "<pre>";
-//set initial flag
-$flag=0;
+include('header.html');
+$debug = 0;
+$totalArray='';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['url'])) {
-    //get PN from form
+//echo '<pre>';
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['parts'])) {
+    
+    // Get numbers from the form
+    $numbers = $_POST['parts'];
+        
+    // Explode the numbers into an array by newlines
+    $numbersArray = preg_split('/\r\n|\r|\n/', $numbers);
+// ;
+($debug == 1) ? var_dump($numbersArray): '';
+
+
+
+foreach ($numbersArray as $number){
     //BEGIN
-
-    $base = "https://www.rockauto.com/en/parts/four+seasons," . $_POST['url'];
+    //$mynum = $numbersArray[0];
+    $base = "https://www.rockauto.com/en/parts/four+seasons," . $number;
      
     //$url = filter_var($_POST['url'], FILTER_SANITIZE_URL);
     $url = filter_var($base, FILTER_SANITIZE_URL);
@@ -32,8 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['url'])) {
             $anchors = $xpath->query("//a[contains(@class, 'a-btn-moreinfo')]");
 
             if ($anchors->length > 0) {
+                
                 foreach ($anchors as $anchor) {
                     $href = $anchor->getAttribute('href');
+                    
                     if ($href) {
                         //echo "<p><a href='" . htmlspecialchars($href) . "' target='_blank'>" . htmlspecialchars($href) . "</a></p>";
 						$mylink=$href;
@@ -57,69 +73,53 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['url'])) {
 						$atpoints = $newxpath->query("//table[contains(@class, 'moreinfotable')]");
 						
                         //var init
-                        $tc ="";
-                        
-                        foreach ($atpoints as $value) {
-                           //echo $newdom->saveHTML($value);
-                            $tc .= $newdom->saveHTML($value);
+                        //$tc ="";
 
-                        }
+                        foreach ($atpoints as $value) {
+                            
+                           //echo $newdom->saveHTML($value);
+                            //$tc .= $newdom->saveHTML($value);
+                            $totalArray .= $newdom->saveHTML($value);
+                            } 
+                            ($debug == 1) ? var_dump($tc): '';
 
                        // set flag
                        $flag=1;
+      
 
-
-                      
-
-                     }//END
-                }
-            } else {
-                echo "<p>No anchor tags with class 'a-btn-moreinfo' found on the given page.</p>";
-            }
-        }
-    } else {
-        echo "Invalid URL. Please enter a valid URL.";
-    }
+                    }
+                }//foreach
+            }//if anchors >0
+        
+       // echo $tc;
+        
+        }//Main Processing
+    }//if valid url
+}//main if
 }
 
 
 
-
-include('header.html');
-
-echo <<< BEWM
+?>
 
 <div class="centered-container">
-        <h2>AC Kit Attribute Scraper</h1>
-        <p>Enter the part number below. 5283NK</p>
-    
+        <h2>Batch A/C Kit Attributes Scraper</h1>
+        <p>Enter the part numbers below, one per line up to 10, then click submit. Results will appear below. 
+        </p>
+       
     <form method="POST">
-        <label for="url"></label>
-        <input type="text" id="url" name="url" placeholder="Example: 5283NK" required>
+        
+        <textarea rows="10" cols="15" id="parts" name="parts" placeholder="" required></textarea><br />
         <button type="submit">Submit</button>
     </form>
-    <br /><hr />
-    <p>Batch scrapers<br />
-        <a class="scrapelink" href="multiscraper.php">Onscreen data</a> | 
-        <a class="scrapelink" href="multiscraper-dl.php">Download data</a>
-    </p>
-
-           
     </div>
-BEWM;
 
-if ($flag==1){
-echo <<< HAM
-<div class="centered-container">
-    <div class="results">
-        <p>$tc</p>
-        <hr />
-        </div>
-        </div>
-       
-HAM;
-}
+    <?php 
+    $totalArray= str_replace("FOUR SEASONS ", "", $totalArray);
+    $totalArray= str_replace(" Specifications", " Attributes", $totalArray);
 
-include('footer.html');
+
+    echo "<div class=\"results\">$totalArray</div>";
+    
+    include('footer.html');
     ?>
-
