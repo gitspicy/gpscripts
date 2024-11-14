@@ -4,7 +4,7 @@
 
 # Ignore all files in any directory named temp
 temp/
-log/
+#log/
 
 # Ignore logs directory anywhere in the repository
-**/log
+#**/log
