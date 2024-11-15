@@ -14,13 +14,10 @@ include_once('header.html');
         <p><a href="openurls.php" class="prompt-regular" >Open multiple URLS at once</a><br />
         <span class="prompt-thin-italic">Enter a list of website URLs to have them all open at once, in separate tabs.</span>
         
-        <p><a href="optipages.php" class="prompt-regular" >Open multiple parts on Opticat</a><br />
-        <span class="prompt-thin-italic">Enter a list of parts to open on Opticat at once, in separate tabs.</span>
+        <p><a href="optipages.php" class="prompt-regular" >Compare multiple parts pages</a><br />
+        <span class="prompt-thin-italic">Enter a list of parts to open at once, in separate tabs.</span>
 
 
-        <li class="nav-item">
-                        <a class="nav-link" href="query.php"></a>
-                    </li>
         
     </div> 
         
